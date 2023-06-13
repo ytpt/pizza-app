@@ -8,19 +8,20 @@ interface DisplayPizzasProps {
     deletePizza: (id: number) => void;
 }
 
-const DisplayPizzas: FC<DisplayPizzasProps> = ({ pizzasList, updatePizza, deletePizza }) => {
-    return (
-        <div className="container">
-            { pizzasList.map((pizza) => {
-                return <SinglePizza
-                    key={pizza.id}
-                    pizza={pizza}
-                    updatePizza={updatePizza}
-                    deletePizza={deletePizza}
-                />
-            }) }
-        </div>
-    )
+const DisplayPizzas: FC<DisplayPizzasProps> =
+    ({ pizzasList, updatePizza, deletePizza }) => {
+        return (
+            <div className="container">
+                { pizzasList.map((pizza) => {
+                    return <SinglePizza
+                        key={pizza.id}
+                        pizza={pizza}
+                        updatePizza={updatePizza}
+                        deletePizza={deletePizza}
+                    />
+                }) }
+            </div>
+        )
 }
 
 export default DisplayPizzas;

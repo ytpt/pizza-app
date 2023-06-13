@@ -10,8 +10,7 @@ interface EditPizzaFormProps {
 
 const EditPizzaForm: FC<EditPizzaFormProps> =
     ({ data, updatePizza, handleToggleEdit }) => {
-        const [editPizza, setEditPizza] =
-            useState<Pizza>(data);
+        const [editPizza, setEditPizza] = useState<Pizza>(data);
 
         const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
             const { name, value } = e.target;

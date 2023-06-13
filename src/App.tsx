@@ -5,7 +5,6 @@ import Pizza from "./modals/Pizza";
 import DisplayPizzas from "./components/DisplayPizzas";
 
 const App: FC = () => {
-
     const [pizzasList, setPizzasList] = useState<Pizza[]>([]);
 
     const addPizza = (newPizza: Pizza) => {
@@ -22,20 +21,18 @@ const App: FC = () => {
         setPizzasList(newPizzasList);
     }
 
-  console.log(pizzasList);
-
-  return (
-    <div className="App">
-        <div className="wrap">
-            <span className="heading">MAKE LOVE PIZZA</span>
-            <AddPizzaForm addPizza={addPizza} />
-            <DisplayPizzas
-                pizzasList={pizzasList}
-                updatePizza={updatePizza}
-                deletePizza={deletePizza}
-            />
+    return (
+        <div className="App">
+            <div className="wrap">
+                <span className="heading">MAKE LOVE PIZZA</span>
+                <AddPizzaForm addPizza={addPizza} />
+                <DisplayPizzas
+                    pizzasList={pizzasList}
+                    updatePizza={updatePizza}
+                    deletePizza={deletePizza}
+                />
+            </div>
         </div>
-    </div>
   );
 }
 

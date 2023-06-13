@@ -10,7 +10,6 @@ interface SinglePizzaProps {
 }
 
 const SinglePizza: FC<SinglePizzaProps> = ({ pizza, updatePizza, deletePizza }) => {
-
     const [edit, setEdit] = useState<boolean>(false);
 
     const handleToggleEdit = () => {
